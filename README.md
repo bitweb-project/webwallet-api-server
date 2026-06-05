@@ -116,12 +116,10 @@ sudo chown -R bitweb:bitweb /opt/bitweb-api
 ### 3. Create a virtual environment and install dependencies
 
 ```bash
-sudo -u bitweb bash -c "
   cd /opt/bitweb-api
   python3 -m venv venv
   venv/bin/pip install --upgrade pip
   venv/bin/pip install -r requirements.txt
-"
 ```
 
 ### 4. Configure environment variables
@@ -256,7 +254,7 @@ sudo journalctl -u bitweb-api --since today
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cp env.example .env   # edit as needed
-python app.py
+python3 app.py
 ```
 
 ---
